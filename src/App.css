@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.emergency-custom {
+  width: 100%;
+  flex: 1;
+}
+
+.content-layout {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+  .content-layout {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.truck-background {
+  position: relative;
+}
+.truck-background::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 2000px rgba(23, 34, 49, 0.7);
+  background-image: url(https://images.squarespace-cdn.com/content/5c57a321da50d32f334e0156/a6a75cce-388c-4a5f-90ed-ffb3d3eb8ee5/trucks_parked_line_truck_stop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
